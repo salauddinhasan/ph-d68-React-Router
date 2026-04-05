@@ -13,14 +13,31 @@ function App() {
   return (
     <div className="p-10">
       <nav className="mb-10 flex gap-5 border-b pb-5">
-        <Link to="/" className="text-blue-500 hover:underline">
+        <Link
+          to="/"
+          className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-800 transition shadow-sm"
+        >
           Home
         </Link>
-        <Link to="/about" className="text-blue-500 hover:underline">
+        <Link
+          to="/about"
+          className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-800 transition shadow-sm"
+        >
           About
         </Link>
-        <Link to="/contact" className="text-blue-500 hover:underline">
+        <Link
+          to="/contact"
+          className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-800 transition shadow-sm"
+        >
           Contact
+        </Link>
+
+        <Link to='/user/shuvo' className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-800 transition shadow-sm">My Profile</Link>
+        <Link
+          to="/dashboard"
+          className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-800 transition shadow-sm"
+        >
+          Dashboard
         </Link>
       </nav>
 
