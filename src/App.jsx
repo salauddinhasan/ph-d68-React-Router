@@ -1,8 +1,10 @@
-import { Link, Links, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Home from "./pages/Home ";
+import NotFound from "./pages/NotFound";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
@@ -21,9 +23,15 @@ function App() {
 
       <div className="bg-white p-5 shadow-lg rounded-lg">
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* ডাইনামিক রুটটি যোগ করুন: */}
+          <Route path="/user/:username" element={<UserProfile />} />
+
+          {/* 404 file not found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
