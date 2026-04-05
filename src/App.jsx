@@ -5,6 +5,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import UserProfile from "./pages/UserProfile";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -29,6 +32,11 @@ function App() {
 
           {/* ডাইনামিক রুটটি যোগ করুন: */}
           <Route path="/user/:username" element={<UserProfile />} />
+
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
 
           {/* 404 file not found */}
           <Route path="*" element={<NotFound />} />
